@@ -5,11 +5,12 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
 
-    background: #120505;
-    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f5f5;
+    color: #222;
 
     display: flex;
     justify-content: center;
@@ -23,48 +24,38 @@ body {
     max-width: 650px;
 }
 
-.gerador {
-    background: #1f0909;
-    border: 1px solid #4d1616;
-    border-radius: 20px;
+.conteudo {
+    background: #ffffff;
 
     padding: 40px;
 
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
+    border-radius: 12px;
 
-.projeto {
-    display: inline-block;
-
-    padding: 7px 14px;
-    margin-bottom: 15px;
-
-    border-radius: 20px;
-
-    background: #4b0d0d;
-    color: #ff5555;
-
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 h1 {
-    font-size: 42px;
+    color: #c62828;
+
+    font-size: 38px;
+
     margin-bottom: 10px;
 }
 
-.descricao {
-    color: #bfa5a5;
+.texto {
+    color: #666;
+
     margin-bottom: 30px;
 }
 
 
-/* Área da senha */
+/* Senha */
 
-.senha-area {
+.resultado {
     display: flex;
+
     gap: 10px;
+
     margin-bottom: 30px;
 }
 
@@ -73,123 +64,150 @@ h1 {
 
     min-width: 0;
 
-    padding: 16px;
+    padding: 15px;
 
-    border: 1px solid #6d2020;
-    border-radius: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
 
-    background: #110303;
-    color: #ff5555;
+    background: #fafafa;
+
+    color: #c62828;
 
     font-size: 18px;
+
     outline: none;
 }
 
+#senha:focus {
+    border-color: #c62828;
+}
+
 #senha::placeholder {
-    color: #795f5f;
+    color: #999;
 }
 
 #copiar {
     padding: 0 20px;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 6px;
 
-    background: #a91515;
+    background: #c62828;
     color: white;
 
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 #copiar:hover {
-    background: #d31d1d;
+    background: #a91f1f;
 }
 
 
-/* Configurações */
+/* Opções */
 
-.configuracoes {
+.opcoes {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+
+    gap: 15px;
 }
 
-.configuracoes label {
-    color: #e6d4d4;
+.controle {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 10px;
+
+    align-items: center;
 }
 
-.configuracoes strong {
-    color: #ff4a4a;
+.controle label {
+    font-weight: bold;
+}
+
+#valor-tamanho {
+    color: #c62828;
+
+    font-weight: bold;
 }
 
 #tamanho {
+    grid-column: 1 / -1;
+
     width: 100%;
-    accent-color: #d71919;
+
+    accent-color: #c62828;
+
     cursor: pointer;
 }
 
-.opcao {
+.opcoes > label {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
-    padding: 12px;
+    padding: 10px;
 
-    background: #280c0c;
-    border-radius: 8px;
+    border-radius: 6px;
+
+    background: #fafafa;
 
     cursor: pointer;
 }
 
-.opcao input {
+.opcoes input[type="checkbox"] {
     width: 17px;
     height: 17px;
 
-    accent-color: #d71919;
+    accent-color: #c62828;
 
     cursor: pointer;
 }
 
 
-/* Botão gerar */
+/* Botão */
 
-.botao-gerar {
+.botao {
     width: 100%;
 
-    margin-top: 30px;
-    padding: 16px;
+    margin-top: 25px;
+
+    padding: 15px;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 6px;
 
-    background: #d71919;
+    background: #c62828;
     color: white;
 
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
-.botao-gerar:hover {
-    background: #f02626;
-    transform: translateY(-2px);
+.botao:hover {
+    background: #a91f1f;
 }
 
 #mensagem {
-    min-height: 24px;
+    min-height: 22px;
 
-    margin-top: 18px;
+    margin-top: 15px;
 
     text-align: center;
 
-    color: #ff7777;
+    color: #c62828;
+
     font-weight: bold;
 }
 
@@ -198,20 +216,18 @@ h1 {
 
 footer {
     text-align: center;
-    margin-top: 25px;
 
-    color: #8e7777;
+    margin-top: 20px;
+
+    color: #777;
+
     font-size: 13px;
 
-    line-height: 1.8;
-}
-
-footer strong {
-    color: #ff5555;
+    line-height: 1.7;
 }
 
 
-/* Responsividade */
+/* Celular */
 
 @media (max-width: 600px) {
 
@@ -219,19 +235,19 @@ footer strong {
         padding: 15px;
     }
 
-    .gerador {
+    .conteudo {
         padding: 25px 20px;
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
-    .senha-area {
+    .resultado {
         flex-direction: column;
     }
 
     #copiar {
-        padding: 14px;
+        padding: 13px;
     }
 }
