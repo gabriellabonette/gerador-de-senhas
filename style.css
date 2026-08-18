@@ -1,12 +1,10 @@
 :root {
-    --vermelho: #dc2626;
-    --vermelho-escuro: #991b1b;
-    --vermelho-claro: #fee2e2;
-    --vermelho-medio: #ef4444;
-    --fundo: #fff5f5;
+    --vermelho: #d90429;
+    --vermelho-escuro: #8d001b;
+    --vermelho-claro: #ffe1e6;
+    --fundo: #fff3f5;
     --branco: #ffffff;
-    --texto: #450a0a;
-    --cinza: #7f1d1d;
+    --texto: #450a14;
 }
 
 * {
@@ -18,24 +16,22 @@
 
 body {
     min-height: 100vh;
-    background:
-        radial-gradient(circle at top left, #fecaca, transparent 35%),
-        radial-gradient(circle at bottom right, #fca5a5, transparent 35%),
-        #fff1f2;
+
+    background: linear-gradient(
+        135deg,
+        #fff1f2,
+        #fecdd3,
+        #fda4af
+    );
 
     color: var(--texto);
 
-    padding: 45px 30px;
+    padding: 60px 40px;
 }
-
-
-/* =========================
-   CONTAINER
-========================= */
 
 .container {
     width: 100%;
-    max-width: 1250px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -45,45 +41,40 @@ body {
 ========================= */
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
 
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     background: var(--vermelho);
-    border-radius: 30px;
 
-    font-size: 55px;
+    border-radius: 35px;
 
-    box-shadow: 0 15px 35px rgba(153, 27, 27, 0.3);
+    font-size: 75px;
 
-    transform: rotate(-3deg);
+    box-shadow: 0 20px 45px rgba(141, 0, 27, 0.3);
 }
 
 h1 {
     text-align: center;
 
-    font-size: clamp(42px, 6vw, 70px);
-
-    font-weight: 800;
+    font-size: 70px;
 
     color: var(--vermelho-escuro);
 
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .autor {
     text-align: center;
 
-    font-size: 20px;
+    font-size: 27px;
 
-    color: var(--cinza);
-
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .autor strong {
@@ -93,74 +84,66 @@ h1 {
 .subtitulo {
     text-align: center;
 
-    font-size: 19px;
+    font-size: 24px;
 
-    color: #7f4b4b;
+    color: #70212d;
 
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 }
 
 
 /* =========================
-   ÁREA DA SENHA
+   CAMPO DA SENHA
 ========================= */
 
 .conteudo-senha {
     background: var(--branco);
 
-    padding: 35px;
+    padding: 50px;
 
-    border-radius: 25px;
+    border-radius: 30px;
 
-    box-shadow: 0 20px 50px rgba(127, 29, 29, 0.15);
+    box-shadow: 0 20px 50px rgba(141, 0, 27, 0.18);
 
-    border: 2px solid #fecaca;
-
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 }
 
 .conteudo-senha label {
     display: block;
 
-    font-size: 20px;
+    font-size: 28px;
 
     font-weight: bold;
 
-    color: var(--vermelho-escuro);
+    margin-bottom: 18px;
 
-    margin-bottom: 12px;
+    color: var(--vermelho-escuro);
 }
 
 #campo-senha {
     width: 100%;
 
-    height: 75px;
+    height: 100px;
 
-    padding: 18px 22px;
+    padding: 20px 30px;
 
-    border: 3px solid var(--vermelho-medio);
+    border: 4px solid var(--vermelho);
 
-    border-radius: 15px;
+    border-radius: 20px;
 
     background: #fffafa;
 
     color: var(--vermelho-escuro);
 
-    font-size: 27px;
+    font-size: 35px;
 
     font-weight: bold;
 
-    outline: none;
-
     text-align: center;
 
-    letter-spacing: 2px;
-}
+    letter-spacing: 3px;
 
-#campo-senha:focus {
-    border-color: var(--vermelho-escuro);
-
-    box-shadow: 0 0 0 4px #fee2e2;
+    outline: none;
 }
 
 
@@ -171,181 +154,147 @@ h1 {
 .acoes {
     display: flex;
 
-    gap: 20px;
+    gap: 30px;
 
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .acoes button {
     flex: 1;
 
-    height: 60px;
+    height: 80px;
 
     border: none;
 
-    border-radius: 14px;
+    border-radius: 18px;
 
     background: var(--vermelho);
 
     color: white;
 
-    font-size: 18px;
+    font-size: 25px;
 
     font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.25s;
-}
-
-.acoes button:hover {
-    background: var(--vermelho-escuro);
-
-    transform: translateY(-4px);
-
-    box-shadow: 0 10px 20px rgba(153, 27, 27, 0.25);
-}
-
-.acoes button:active {
-    transform: scale(0.97);
-}
-
-
-/* =========================
-   TÍTULO
-========================= */
-
-h2 {
-    text-align: center;
-
-    font-size: 38px;
-
-    color: var(--vermelho-escuro);
-
-    margin-bottom: 35px;
-}
-
-
-/* =========================
-   CARDS
-========================= */
-
-.parametros {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 30px;
-
-    align-items: stretch;
-}
-
-.parametro-senha {
-    background: var(--branco);
-
-    min-height: 330px;
-
-    padding: 35px;
-
-    border-radius: 25px;
-
-    border: 2px solid #fecaca;
-
-    box-shadow: 0 15px 35px rgba(127, 29, 29, 0.12);
-
-    transition: 0.25s;
-}
-
-.parametro-senha:hover {
-    transform: translateY(-7px);
-
-    box-shadow: 0 20px 40px rgba(127, 29, 29, 0.2);
-
-    border-color: var(--vermelho-medio);
-}
-
-.parametro-senha__titulo {
-    text-align: center;
-
-    font-size: 20px;
-
-    color: var(--vermelho-escuro);
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================
-   BOTÕES + E -
-========================= */
-
-.parametro-senha-botoes {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    margin-top: 45px;
-}
-
-.parametro-senha__botao {
-    width: 75px;
-    height: 75px;
-
-    border: none;
-
-    background: var(--vermelho);
-
-    color: white;
-
-    font-size: 35px;
 
     cursor: pointer;
 
     transition: 0.2s;
 }
 
+.acoes button:hover {
+    background: var(--vermelho-escuro);
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   PERSONALIZAÇÃO
+========================= */
+
+h2 {
+    text-align: center;
+
+    color: var(--vermelho-escuro);
+
+    font-size: 48px;
+
+    margin-bottom: 45px;
+}
+
+.parametros {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+.parametro-senha {
+    background: var(--branco);
+
+    min-height: 430px;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    border: 3px solid #ffcdd2;
+
+    box-shadow: 0 18px 40px rgba(139, 0, 24, 0.15);
+}
+
+.parametro-senha__titulo {
+    text-align: center;
+
+    color: var(--vermelho-escuro);
+
+    font-size: 26px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   TAMANHO
+========================= */
+
+.parametro-senha-botoes {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 80px;
+}
+
+.parametro-senha__botao {
+    width: 100px;
+    height: 100px;
+
+    border: none;
+
+    background: var(--vermelho);
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
 .parametro-senha__botao:first-child {
-    border-radius: 15px 0 0 15px;
+    border-radius: 20px 0 0 20px;
 }
 
 .parametro-senha__botao:last-child {
-    border-radius: 0 15px 15px 0;
-}
-
-.parametro-senha__botao:hover {
-    background: var(--vermelho-escuro);
-
-    transform: scale(1.04);
+    border-radius: 0 20px 20px 0;
 }
 
 .parametro-senha__texto {
-    width: 90px;
-    height: 75px;
+    width: 120px;
+    height: 100px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    background: #fff5f5;
+    background: var(--fundo);
 
     color: var(--vermelho-escuro);
 
-    border-top: 3px solid var(--vermelho);
-    border-bottom: 3px solid var(--vermelho);
+    border-top: 4px solid var(--vermelho);
+    border-bottom: 4px solid var(--vermelho);
 
-    font-size: 28px;
+    font-size: 38px;
 
     font-weight: bold;
-
-    text-align: center;
 }
 
 
 /* =========================
-   CHECKBOXES
+   CHECKBOX
 ========================= */
 
 .parametro-senha-checkbox {
@@ -353,49 +302,41 @@ h2 {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 18px;
 
-    padding: 14px;
+    padding: 20px;
 
-    margin-bottom: 10px;
+    margin: 15px 0;
 
-    border-radius: 12px;
+    border-radius: 16px;
 
-    background: #fff5f5;
-
-    transition: 0.2s;
-}
-
-.parametro-senha-checkbox:hover {
-    background: var(--vermelho-claro);
+    background: var(--fundo);
 }
 
 .checkbox {
-    width: 21px;
-    height: 21px;
-
-    cursor: pointer;
+    width: 27px;
+    height: 27px;
 
     accent-color: var(--vermelho);
+
+    cursor: pointer;
 }
 
 .parametro-senha-checkbox label {
-    font-size: 16px;
-
-    color: var(--texto);
+    font-size: 20px;
 
     cursor: pointer;
 }
 
 
 /* =========================
-   FORÇA DA SENHA
+   FORÇA
 ========================= */
 
 .barra {
     width: 100%;
 
-    height: 35px;
+    height: 45px;
 
     background: #fee2e2;
 
@@ -403,7 +344,7 @@ h2 {
 
     overflow: hidden;
 
-    margin-top: 35px;
+    margin-top: 60px;
 }
 
 .forca {
@@ -429,7 +370,7 @@ h2 {
 .forte {
     width: 100%;
 
-    background: #22c55e;
+    background: #16a34a;
 }
 
 .parametro-senha-textos {
@@ -437,85 +378,71 @@ h2 {
 
     justify-content: space-between;
 
-    margin-top: 15px;
+    margin-top: 18px;
 
-    font-size: 15px;
-
-    font-weight: bold;
-}
-
-.entropia {
-    margin-top: 30px;
-
-    padding: 15px;
-
-    border-radius: 12px;
-
-    background: #fff5f5;
-
-    color: var(--vermelho-escuro);
-
-    text-align: center;
-
-    font-size: 15px;
-
-    line-height: 23px;
-}
-
-
-/* =========================
-   INFORMAÇÕES
-========================= */
-
-.informacoes {
-    margin-top: 45px;
-
-    padding: 25px;
-
-    background: var(--vermelho-escuro);
-
-    color: white;
-
-    border-radius: 20px;
-
-    text-align: center;
-
-    box-shadow: 0 15px 30px rgba(127, 29, 29, 0.2);
-}
-
-.informacoes p {
-    margin: 6px 0;
-
-    font-size: 15px;
-}
-
-.informacoes p:first-child {
     font-size: 18px;
 
     font-weight: bold;
 }
 
+.entropia {
+    margin-top: 35px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: var(--fundo);
+
+    color: var(--vermelho-escuro);
+
+    text-align: center;
+
+    font-size: 18px;
+
+    line-height: 28px;
+}
+
 
 /* =========================
-   RESPONSIVIDADE
+   RODAPÉ
 ========================= */
 
-@media (max-width: 900px) {
+footer {
+    margin-top: 60px;
 
-    body {
-        padding: 30px 20px;
-    }
+    padding: 35px;
+
+    background: var(--vermelho-escuro);
+
+    color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    line-height: 2;
+}
+
+footer strong {
+    color: #ffcdd2;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1000px) {
 
     .parametros {
         grid-template-columns: 1fr;
     }
 
-    .parametro-senha {
-        min-height: auto;
-    }
-
     h1 {
-        font-size: 45px;
+        font-size: 55px;
     }
 
 }
@@ -523,31 +450,34 @@ h2 {
 @media (max-width: 600px) {
 
     body {
-        padding: 20px 12px;
+        padding: 30px 15px;
     }
 
     .logo {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
 
-        font-size: 45px;
+        font-size: 55px;
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 40px;
+    }
+
+    .autor {
+        font-size: 20px;
     }
 
     .subtitulo {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .conteudo-senha {
-        padding: 20px;
+        padding: 25px;
     }
 
     #campo-senha {
-        height: 65px;
-
+        height: 75px;
         font-size: 20px;
     }
 
@@ -555,8 +485,13 @@ h2 {
         flex-direction: column;
     }
 
+    .acoes button {
+        height: 70px;
+        font-size: 20px;
+    }
+
     h2 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .parametro-senha {
