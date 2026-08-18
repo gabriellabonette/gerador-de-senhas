@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,8 @@
 
     <main class="container">
 
-        <!-- Cabeçalho -->
+        <!-- CABEÇALHO -->
+
         <div class="logo">🔒</div>
 
         <h1>Gerador de Senhas</h1>
@@ -26,16 +28,21 @@
             Gere instantaneamente uma senha aleatória e segura.
         </p>
 
-        <!-- Campo da senha -->
+
+        <!-- SENHA -->
+
         <section class="conteudo-senha">
 
-            <label for="campo-senha">Senha</label>
+            <label for="campo-senha">
+                Senha
+            </label>
 
             <input
                 type="text"
                 id="campo-senha"
                 name="senha"
-                readonly>
+                readonly
+            >
 
             <div class="acoes">
 
@@ -51,11 +58,18 @@
 
         </section>
 
-        <h2>Personalize sua senha</h2>
+
+        <!-- PERSONALIZAÇÃO -->
+
+        <h2>
+            Personalize sua senha
+        </h2>
 
         <section class="parametros">
 
-            <!-- Número de caracteres -->
+
+            <!-- NÚMERO DE CARACTERES -->
+
             <div class="parametro-senha">
 
                 <h4 class="parametro-senha__titulo">
@@ -64,74 +78,100 @@
 
                 <div class="parametro-senha-botoes">
 
-                    <button class="parametro-senha__botao">-</button>
+                    <button class="parametro-senha__botao">
+                        -
+                    </button>
 
-                    <p class="parametro-senha__texto">12</p>
+                    <p class="parametro-senha__texto">
+                        12
+                    </p>
 
-                    <button class="parametro-senha__botao">+</button>
+                    <button class="parametro-senha__botao">
+                        +
+                    </button>
 
                 </div>
 
             </div>
 
-            <!-- Características -->
+
+            <!-- CARACTERÍSTICAS -->
+
             <div class="parametro-senha">
 
                 <h4 class="parametro-senha__titulo">
                     Características da senha
                 </h4>
 
+
                 <div class="parametro-senha-checkbox">
+
                     <input
                         type="checkbox"
                         class="checkbox"
                         id="maiusculo"
-                        checked>
+                        checked
+                    >
 
                     <label for="maiusculo">
                         Letras maiúsculas
                     </label>
+
                 </div>
 
+
                 <div class="parametro-senha-checkbox">
+
                     <input
                         type="checkbox"
                         class="checkbox"
                         id="minusculo"
-                        checked>
+                        checked
+                    >
 
                     <label for="minusculo">
                         Letras minúsculas
                     </label>
+
                 </div>
 
+
                 <div class="parametro-senha-checkbox">
+
                     <input
                         type="checkbox"
                         class="checkbox"
                         id="numero"
-                        checked>
+                        checked
+                    >
 
                     <label for="numero">
                         Números
                     </label>
+
                 </div>
 
+
                 <div class="parametro-senha-checkbox">
+
                     <input
                         type="checkbox"
                         class="checkbox"
                         id="simbolo"
-                        checked>
+                        checked
+                    >
 
                     <label for="simbolo">
                         Símbolos
                     </label>
+
                 </div>
 
             </div>
 
-            <!-- Força da senha -->
+
+            <!-- FORÇA DA SENHA -->
+
             <div class="parametro-senha">
 
                 <h4 class="parametro-senha__titulo">
@@ -139,16 +179,22 @@
                 </h4>
 
                 <div class="barra">
+
                     <div class="forca fraca"></div>
+
                 </div>
+
 
                 <div class="parametro-senha-textos">
 
                     <p>Fraca</p>
+
                     <p>Média</p>
+
                     <p>Forte</p>
 
                 </div>
+
 
                 <p class="entropia"></p>
 
@@ -156,15 +202,30 @@
 
         </section>
 
-        <!-- Informações do projeto -->
-        <footer class="informacoes">
-            <p>Professor: Luiz Alessandro</p>
-            <p>Colégio Estadual Dom Pedro II</p>
+
+        <!-- INFORMAÇÕES -->
+
+        <footer>
+
+            <p>
+                <strong>Gabriella Bonette</strong>
+            </p>
+
+            <p>
+                Professor: Luiz Alessandro
+            </p>
+
+            <p>
+                Colégio Estadual Dom Pedro II
+            </p>
+
         </footer>
 
     </main>
 
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
