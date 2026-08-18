@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gerador de Senhas | Agrinho 2026</title>
+    <title>Gerador de Senhas</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,17 +14,15 @@
 
     <main class="container">
 
-        <section class="gerador">
+        <section class="conteudo">
 
-            <span class="projeto">AGRINHO 2026</span>
+            <h1>Gerador de senhas</h1>
 
-            <h1>Gerador de Senhas</h1>
-
-            <p class="descricao">
-                Crie uma senha segura de forma rápida e fácil.
+            <p class="texto">
+                Gere uma senha segura e personalizada.
             </p>
 
-            <div class="senha-area">
+            <div class="resultado">
                 <input
                     type="text"
                     id="senha"
@@ -32,49 +30,71 @@
                     placeholder="Sua senha aparecerá aqui"
                 >
 
-                <button id="copiar" type="button">
+                <button id="copiar">
                     Copiar
                 </button>
             </div>
 
-            <div class="configuracoes">
+            <div class="opcoes">
 
-                <label for="tamanho">
-                    Tamanho da senha:
-                    <strong id="valor-tamanho">12</strong>
-                </label>
+                <div class="controle">
+                    <label for="tamanho">
+                        Tamanho da senha:
+                    </label>
 
-                <input
-                    type="range"
-                    id="tamanho"
-                    min="6"
-                    max="30"
-                    value="12"
-                >
+                    <span id="valor-tamanho">12</span>
 
-                <label class="opcao">
-                    <input type="checkbox" id="maiusculas" checked>
+                    <input
+                        type="range"
+                        id="tamanho"
+                        min="6"
+                        max="20"
+                        value="12"
+                    >
+                </div>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        id="maiusculas"
+                        checked
+                    >
                     Letras maiúsculas
                 </label>
 
-                <label class="opcao">
-                    <input type="checkbox" id="minusculas" checked>
+                <label>
+                    <input
+                        type="checkbox"
+                        id="minusculas"
+                        checked
+                    >
                     Letras minúsculas
                 </label>
 
-                <label class="opcao">
-                    <input type="checkbox" id="numeros" checked>
+                <label>
+                    <input
+                        type="checkbox"
+                        id="numeros"
+                        checked
+                    >
                     Números
                 </label>
 
-                <label class="opcao">
-                    <input type="checkbox" id="simbolos" checked>
+                <label>
+                    <input
+                        type="checkbox"
+                        id="simbolos"
+                        checked
+                    >
                     Símbolos
                 </label>
 
             </div>
 
-            <button id="gerar" class="botao-gerar" type="button">
+            <button
+                id="gerar"
+                class="botao"
+            >
                 Gerar senha
             </button>
 
@@ -84,21 +104,9 @@
 
         <footer>
 
-            <p>
-                <strong>Gabriella Bonette</strong>
-            </p>
-
-            <p>
-                Professor: Luiz Alessandro
-            </p>
-
-            <p>
-                Colégio Estadual Dom Pedro II
-            </p>
-
-            <p>
-                Projeto Agrinho 2026
-            </p>
+            <p>Gabriella Bonette</p>
+            <p>Professor: Luiz Alessandro</p>
+            <p>Colégio Estadual Dom Pedro II</p>
 
         </footer>
 
