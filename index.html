@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerador de Senhas | Agrinho 2026</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="gerador">
+
+            <span class="projeto">AGRINHO 2026</span>
+
+            <h1>Gerador de Senhas</h1>
+
+            <p class="descricao">
+                Crie uma senha segura de forma rápida e fácil.
+            </p>
+
+            <div class="senha-area">
+                <input
+                    type="text"
+                    id="senha"
+                    readonly
+                    placeholder="Sua senha aparecerá aqui"
+                >
+
+                <button id="copiar" type="button">
+                    Copiar
+                </button>
+            </div>
+
+            <div class="configuracoes">
+
+                <label for="tamanho">
+                    Tamanho da senha:
+                    <strong id="valor-tamanho">12</strong>
+                </label>
+
+                <input
+                    type="range"
+                    id="tamanho"
+                    min="6"
+                    max="30"
+                    value="12"
+                >
+
+                <label class="opcao">
+                    <input type="checkbox" id="maiusculas" checked>
+                    Letras maiúsculas
+                </label>
+
+                <label class="opcao">
+                    <input type="checkbox" id="minusculas" checked>
+                    Letras minúsculas
+                </label>
+
+                <label class="opcao">
+                    <input type="checkbox" id="numeros" checked>
+                    Números
+                </label>
+
+                <label class="opcao">
+                    <input type="checkbox" id="simbolos" checked>
+                    Símbolos
+                </label>
+
+            </div>
+
+            <button id="gerar" class="botao-gerar" type="button">
+                Gerar senha
+            </button>
+
+            <p id="mensagem"></p>
+
+        </section>
+
+        <footer>
+
+            <p>
+                <strong>Gabriella Bonette</strong>
+            </p>
+
+            <p>
+                Professor: Luiz Alessandro
+            </p>
+
+            <p>
+                Colégio Estadual Dom Pedro II
+            </p>
+
+            <p>
+                Projeto Agrinho 2026
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
