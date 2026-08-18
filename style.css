@@ -1,253 +1,264 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    --branco:#ffffff;
+    --vermelho-fundo:#fff1f1;
+    --vermelho-claro:#fecaca;
+    --vermelho-medio:#f87171;
+    --vermelho-escuro:#dc2626;
+    --vermelho-borda:#ef4444;
+    --texto:#7f1d1d;
+    --fundo-barra:#fee2e2;
 }
 
-body {
-    min-height: 100vh;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    background: #f5f5f5;
-    color: #222;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 30px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.container {
-    width: 100%;
-    max-width: 650px;
+body{
+    background:linear-gradient(135deg,#fee2e2,#fecaca,#fca5a5);
+    color:var(--texto);
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+    min-height:100vh;
 }
 
-.conteudo {
-    background: #ffffff;
-
-    padding: 40px;
-
-    border-radius: 12px;
-
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+.container{
+    width:100%;
+    max-width:950px;
 }
 
-h1 {
-    color: #c62828;
-
-    font-size: 38px;
-
-    margin-bottom: 10px;
+.logo{
+    font-size:75px;
+    text-align:center;
+    margin-bottom:15px;
 }
 
-.texto {
-    color: #666;
-
-    margin-bottom: 30px;
+h1{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:10px;
+    color:var(--vermelho-escuro);
 }
 
-
-/* Senha */
-
-.resultado {
-    display: flex;
-
-    gap: 10px;
-
-    margin-bottom: 30px;
+.autor{
+    text-align:center;
+    font-size:18px;
+    color:var(--texto);
+    margin-bottom:10px;
 }
 
-#senha {
-    flex: 1;
-
-    min-width: 0;
-
-    padding: 15px;
-
-    border: 2px solid #ddd;
-    border-radius: 6px;
-
-    background: #fafafa;
-
-    color: #c62828;
-
-    font-size: 18px;
-
-    outline: none;
+.subtitulo{
+    text-align:center;
+    color:#ef4444;
+    font-size:18px;
+    margin-bottom:35px;
 }
 
-#senha:focus {
-    border-color: #c62828;
+.conteudo-senha{
+    margin-bottom:35px;
 }
 
-#senha::placeholder {
-    color: #999;
+.conteudo-senha label{
+    display:block;
+    margin-bottom:10px;
+    font-size:18px;
+    font-weight:bold;
 }
 
-#copiar {
-    padding: 0 20px;
-
-    border: none;
-    border-radius: 6px;
-
-    background: #c62828;
-    color: white;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.2s;
+#campo-senha{
+    width:100%;
+    padding:18px;
+    border:2px solid var(--vermelho-borda);
+    border-radius:12px;
+    font-size:22px;
+    background:white;
+    color:var(--texto);
+    outline:none;
 }
 
-#copiar:hover {
-    background: #a91f1f;
+#campo-senha:focus{
+    border-color:var(--vermelho-escuro);
 }
 
-
-/* Opções */
-
-.opcoes {
-    display: flex;
-    flex-direction: column;
-
-    gap: 15px;
+.acoes{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
 }
 
-.controle {
-    display: grid;
-
-    grid-template-columns: 1fr auto;
-
-    gap: 10px;
-
-    align-items: center;
+.acoes button{
+    flex:1;
+    background:var(--vermelho-escuro);
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
 }
 
-.controle label {
-    font-weight: bold;
+.acoes button:hover{
+    background:#b91c1c;
+    transform:translateY(-3px);
 }
 
-#valor-tamanho {
-    color: #c62828;
-
-    font-weight: bold;
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--vermelho-escuro);
 }
 
-#tamanho {
-    grid-column: 1 / -1;
-
-    width: 100%;
-
-    accent-color: #c62828;
-
-    cursor: pointer;
+.parametros{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 
-.opcoes > label {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 10px;
-
-    border-radius: 6px;
-
-    background: #fafafa;
-
-    cursor: pointer;
+.parametro-senha{
+    background:var(--branco);
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(220,38,38,.2);
 }
 
-.opcoes input[type="checkbox"] {
-    width: 17px;
-    height: 17px;
-
-    accent-color: #c62828;
-
-    cursor: pointer;
+.parametro-senha__titulo{
+    margin-bottom:20px;
+    text-align:center;
+    color:var(--vermelho-escuro);
 }
 
-
-/* Botão */
-
-.botao {
-    width: 100%;
-
-    margin-top: 25px;
-
-    padding: 15px;
-
-    border: none;
-    border-radius: 6px;
-
-    background: #c62828;
-    color: white;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.2s;
+.parametro-senha-botoes{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.botao:hover {
-    background: #a91f1f;
+.parametro-senha__botao{
+    background:var(--vermelho-escuro);
+    color:white;
+    border:none;
+    padding:18px 25px;
+    font-size:24px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-#mensagem {
-    min-height: 22px;
-
-    margin-top: 15px;
-
-    text-align: center;
-
-    color: #c62828;
-
-    font-weight: bold;
+.parametro-senha__botao:hover{
+    background:#b91c1c;
+    transform:scale(1.05);
 }
 
-
-/* Rodapé */
-
-footer {
-    text-align: center;
-
-    margin-top: 20px;
-
-    color: #777;
-
-    font-size: 13px;
-
-    line-height: 1.7;
+.parametro-senha__texto{
+    background:white;
+    color:var(--texto);
+    border-top:2px solid var(--vermelho-borda);
+    border-bottom:2px solid var(--vermelho-borda);
+    padding:18px 25px;
+    font-size:24px;
+    min-width:70px;
+    text-align:center;
 }
 
+.parametro-senha-checkbox{
+    margin:14px 0;
+}
 
-/* Celular */
+.checkbox{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+}
 
-@media (max-width: 600px) {
+.parametro-senha-checkbox label{
+    margin-left:8px;
+    cursor:pointer;
+}
 
-    body {
-        padding: 15px;
+.barra{
+    width:100%;
+    height:30px;
+    background:var(--fundo-barra);
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.forca{
+    height:30px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.fraca{
+    width:25%;
+    background:#ef4444;
+}
+
+.media{
+    width:60%;
+    background:#f59e0b;
+}
+
+.forte{
+    width:100%;
+    background:#16a34a;
+}
+
+.parametro-senha-textos{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.entropia{
+    margin-top:18px;
+    text-align:center;
+    font-size:15px;
+    line-height:22px;
+}
+
+button{
+    border-radius:10px;
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+input[type="checkbox"]{
+    accent-color:var(--vermelho-escuro);
+}
+
+@media(max-width:768px){
+
+    .parametros{
+        grid-template-columns:1fr;
     }
 
-    .conteudo {
-        padding: 25px 20px;
+    .acoes{
+        flex-direction:column;
     }
 
-    h1 {
-        font-size: 30px;
+    h1{
+        font-size:34px;
     }
 
-    .resultado {
-        flex-direction: column;
+    .logo{
+        font-size:60px;
     }
 
-    #copiar {
-        padding: 13px;
+    #campo-senha{
+        font-size:18px;
     }
+
+    .parametro-senha__botao{
+        padding:15px 20px;
+    }
+
 }
