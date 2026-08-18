@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    background: #120505;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+.gerador {
+    background: #1f0909;
+    border: 1px solid #4d1616;
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.projeto {
+    display: inline-block;
+
+    padding: 7px 14px;
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    background: #4b0d0d;
+    color: #ff5555;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #bfa5a5;
+    margin-bottom: 30px;
+}
+
+
+/* Área da senha */
+
+.senha-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#senha {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 16px;
+
+    border: 1px solid #6d2020;
+    border-radius: 10px;
+
+    background: #110303;
+    color: #ff5555;
+
+    font-size: 18px;
+    outline: none;
+}
+
+#senha::placeholder {
+    color: #795f5f;
+}
+
+#copiar {
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #a91515;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#copiar:hover {
+    background: #d31d1d;
+}
+
+
+/* Configurações */
+
+.configuracoes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.configuracoes label {
+    color: #e6d4d4;
+}
+
+.configuracoes strong {
+    color: #ff4a4a;
+}
+
+#tamanho {
+    width: 100%;
+    accent-color: #d71919;
+    cursor: pointer;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    background: #280c0c;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.opcao input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #d71919;
+
+    cursor: pointer;
+}
+
+
+/* Botão gerar */
+
+.botao-gerar {
+    width: 100%;
+
+    margin-top: 30px;
+    padding: 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #d71919;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-gerar:hover {
+    background: #f02626;
+    transform: translateY(-2px);
+}
+
+#mensagem {
+    min-height: 24px;
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #ff7777;
+    font-weight: bold;
+}
+
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+
+    color: #8e7777;
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+footer strong {
+    color: #ff5555;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .gerador {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .senha-area {
+        flex-direction: column;
+    }
+
+    #copiar {
+        padding: 14px;
+    }
+}
