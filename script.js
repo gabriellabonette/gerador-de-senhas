@@ -1,3 +1,7 @@
+const campoSenha = document.getElementById("senha");
+const botaoGerar = document.getElementById("gerar");
+const botaoCopiar = document.getElementById("copiar");
+
 const tamanho = document.getElementById("tamanho");
 const valorTamanho = document.getElementById("valor-tamanho");
 
@@ -6,97 +10,72 @@ const minusculas = document.getElementById("minusculas");
 const numeros = document.getElementById("numeros");
 const simbolos = document.getElementById("simbolos");
 
-const senha = document.getElementById("senha");
-const gerar = document.getElementById("gerar");
-const copiar = document.getElementById("copiar");
 const mensagem = document.getElementById("mensagem");
 
 
-// Atualiza o número do tamanho da senha
-tamanho.addEventListener("input", () => {
+tamanho.addEventListener("input", function () {
     valorTamanho.textContent = tamanho.value;
 });
 
 
-// Gera a senha
 function gerarSenha() {
 
     let caracteres = "";
 
-    const letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const letrasMinusculas = "abcdefghijklmnopqrstuvwxyz";
-    const numerosDisponiveis = "0123456789";
-    const simbolosDisponiveis = "!@#$%&*?+-_=";
-
-
     if (maiusculas.checked) {
-        caracteres += letrasMaiusculas;
+        caracteres += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
 
     if (minusculas.checked) {
-        caracteres += letrasMinusculas;
+        caracteres += "abcdefghijklmnopqrstuvwxyz";
     }
 
     if (numeros.checked) {
-        caracteres += numerosDisponiveis;
+        caracteres += "0123456789";
     }
 
     if (simbolos.checked) {
-        caracteres += simbolosDisponiveis;
+        caracteres += "!@#$%&*+-=?";
     }
 
-
-    // Verifica se alguma opção foi selecionada
     if (caracteres.length === 0) {
-
-        senha.value = "";
-
-        mensagem.textContent =
-            "⚠️ Selecione pelo menos uma opção.";
-
+        campoSenha.value = "";
+        mensagem.textContent = "Selecione pelo menos uma opção.";
         return;
     }
 
+    let senhaGerada = "";
 
-    let novaSenha = "";
+    for (let i = 0; i < tamanho.value; i++) {
 
-    for (let i = 0; i < Number(tamanho.value); i++) {
+        const indice = Math.floor(
+            Math.random() * caracteres.length
+        );
 
-        const indice =
-            Math.floor(Math.random() * caracteres.length);
-
-        novaSenha += caracteres[indice];
+        senhaGerada += caracteres[indice];
     }
 
+    campoSenha.value = senhaGerada;
 
-    senha.value = novaSenha;
-
-    mensagem.textContent = "✅ Senha gerada com sucesso!";
+    mensagem.textContent = "";
 }
 
 
-// Botão gerar
-gerar.addEventListener("click", gerarSenha);
+botaoGerar.addEventListener("click", gerarSenha);
 
 
-// Copiar senha
-copiar.addEventListener("click", async () => {
+botaoCopiar.addEventListener("click", async function () {
 
-    if (senha.value === "") {
-
-        mensagem.textContent =
-            "⚠️ Gere uma senha primeiro.";
-
+    if (campoSenha.value === "") {
+        mensagem.textContent = "Gere uma senha primeiro.";
         return;
     }
 
-
     try {
 
-        await navigator.clipboard.writeText(senha.value);
+        await navigator.clipboard.writeText(campoSenha.value);
 
-        mensagem.textContent =
-            "📋 Senha copiada!";
+        mensagem.textContent = "Senha copiada!";
 
     } catch (erro) {
 
@@ -108,5 +87,4 @@ copiar.addEventListener("click", async () => {
 });
 
 
-// Gera uma senha automaticamente ao abrir a página
 gerarSenha();
